@@ -1,0 +1,55 @@
+
+.navbar .btn {
+    margin: -3px 0 6px;
+    padding: 3px 10px;
+}
+
+.navbar .brand{
+    padding: 0;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#top-nav-bar{
+    position: relative;
+}
+
+#top-nav-links{
+    margin-left: 60px;
+}
+
+.errorMessage, span.required {
+    color: #B94A48;
+}
+
+.controls.error .help-block, .controls.error .help-inline {
+    color: #B94A48;
+}
+
+.table th.center, .table td.center {text-align:center;}
+
+/*
+#my-account li.active a{
+    background: #EDEDE7;
+    color: #000;
+}*/
+
+#my-account i{
+    vertical-align: text-bottom;
+}
+
+
+.align-middle, .table th.align-middle, .table td.align-middle {
+    vertical-align: middle;
+}
+
+.align-center, .table th.align-center, .table td.align-center {
+    text-align: center;
+}
+
+
+#qr-preview .modal-body img{
+    max-width: 400px;
+    
+}

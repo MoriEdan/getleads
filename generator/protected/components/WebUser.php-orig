@@ -1,0 +1,23 @@
+<?php
+class WebUser extends CWebUser {
+    public function checkAccess($operation, $params = array()) {
+        if(Yii::app()->user->getState('role') === 'admin') {
+            return true;
+        }
+        else if($operation == 'ownQr') {
+            $id = Yii::app()->request->getParam('id');
+            
+            if(Qr::isInSession($id)) {
+               return true;
+            }
+            else if($qr = Qr::model()->findByPk($id)) {
+                return Yii::app()->user->getId() == Qr::model()->findByPk($id)->user_id;
+            }
+            else {
+                return false;
+            }
+        }
+        
+        return false;
+    }
+}

@@ -1,0 +1,18 @@
+body {
+    background: url(../images/bg.jpg);
+}
+
+.btn-green {
+    background: #34B475;
+    border: 1px solid #079247;
+    color: #fff;
+}
+
+#top-nav{margin-bottom: 0;}
+
+#qr-features {
+    background: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #E7E7E7;
+}

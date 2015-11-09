@@ -1,0 +1,135 @@
+<?php
+
+class QrGenerateForm extends CFormModel {
+
+    public $title;
+    public $qr_type = 'text';
+    public $text_data_text;
+    public $website_data_url;
+    public $facebook_profile_data_url;
+    public $facebook_like_data_url;
+    public $facebook_like_data_title;
+    public $twitter_profile_data_url;
+    public $twitter_status_data_tweet;
+    public $linkedin_profile_data_url;
+    public $linkedin_share_data_url;
+    public $telephone_data_number;
+    public $sms_data_number;
+    public $email_data_email;
+    public $email_msg_data_email;
+    public $email_msg_data_subject;
+    public $email_msg_data_body;
+    public $vcard_data_fname;
+    public $vcard_data_lname;
+    public $vcard_data_job_title;
+    public $vcard_data_telephone;
+    public $vcard_data_cell;
+    public $vcard_data_fax;
+    public $vcard_data_email;
+    public $vcard_data_website;
+    public $vcard_data_org;
+    public $mecard_data_fname;
+    public $mecard_data_lname;
+    public $mecard_data_telephone;
+    public $mecard_data_email;
+    public $mecard_data_website;
+    public $company;
+
+    /**
+     * Declares the validation rules.
+     */
+    public function rules() {
+        return array(
+//            array('title', 'required'),
+//            array('title', 'length', 'max' => 255),
+            
+            array('qr_type', 'required'),
+            array('text_data_text,website_data_url,facebook_profile_data_url,facebook_like_data_url, facebook_like_data_title,twitter_profile_data_url,twitter_status_data_tweet,linkedin_profile_data_url,linkedin_share_data_url,telephone_data_number,sms_data_number,email_data_email,email_msg_data_email, email_msg_data_subject, email_msg_data_body,mecard_data_fname, mecard_data_lname, mecard_data_telephone,company', 'required', 'on' => 'nosubmit'),
+            array('vcard_data_job_title,vcard_data_fax,vcard_data_website,vcard_data_org,vcard_data_email,mecard_data_email,mecard_data_website, company', 'safe', 'on' => 'nosubmit'),
+            
+            array('text_data_text', 'required', 'on' => 'text'),
+            
+            array('website_data_url,company', 'required', 'on' => 'website'),
+            array('website_data_url', 'url', 'on' => 'website'),
+            
+            array('facebook_profile_data_url', 'required', 'on' => 'facebook_profile'),
+            
+            array('facebook_like_data_url, facebook_like_data_title', 'required', 'on' => 'facebook_like'),
+            array('twitter_profile_data_url', 'required', 'on' => 'twitter_profile'),
+            
+            array('twitter_status_data_tweet', 'required', 'on' => 'twitter_status'),
+            array('twitter_status_data_tweet', 'length', 'max' => 140, 'on' => 'twitter_status'),
+            
+            array('linkedin_profile_data_url', 'required', 'on' => 'linkedin_profile'),
+            array('linkedin_share_data_url', 'required', 'on' => 'linkedin_share'),
+            array('telephone_data_number', 'required', 'on' => 'telephone_number'),
+            array('sms_data_number', 'required', 'on' => 'sms'),
+            
+            array('email_data_email', 'required', 'on' => 'email'),
+            array('email_data_email', 'email', 'on' => 'email'),
+            array('email_msg_data_email, email_msg_data_subject, email_msg_data_body', 'required', 'on' => 'email_msg'),
+            
+           // array('vcard_data_fname, vcard_data_lname, vcard_data_telephone, vcard_data_cell', 'required', 'on' => 'vcard'),
+            array('vcard_data_email', 'email', 'on' => 'vcard'),
+            
+            array('mecard_data_fname, mecard_data_lname, mecard_data_telephone', 'required', 'on' => 'mecard'),
+            array('mecard_data_email', 'email', 'on' => 'mecard'),
+     );       
+    }
+
+    /**
+     * Declares attribute labels.
+     */
+    public function attributeLabels() {
+        return array(
+            'title' => 'QR Code Title',
+            
+            'qr_type' => 'Qr type',
+            
+            'text_data_text' => 'Text',
+            
+            'website_data_url' => 'URL',
+            
+            'facebook_data_profile_url' => 'Facebook Profile URL',
+            
+            'facebook_data_like_url' => 'URL of page to be "liked"',
+            'facebook_data_like_title' => 'Page Title',
+            
+            'twitter_data_profile_url' => 'Twitter Profile',
+            
+            'twitter_data_status_tweet' => 'Tweet',
+            
+            'linkedin_data_profile_url' => 'Public Profile URL',
+            
+            'linkedin_data_share_url' => 'URL to be shared',
+            
+            'telephone_data_number' => 'Telephone Number',
+            
+            'sms_data_number' => 'Mobile Number',
+            
+            'email_data_email' => 'E-mail Address',
+            
+            'email_msg_data_email' => 'E-mail Address',
+            'email_msg_data_subject' => 'Subject',
+            'email_msg_data_body' => 'Message',
+            
+            'vcard_data_fname' => 'First Name',
+            'vcard_data_lname' => 'Last Name',
+            'vcard_data_job_title' => 'Job Title',
+            'vcard_data_telephone' => 'Telephone',
+            'vcard_data_cell' => 'Cell',
+            'vcard_data_fax' => 'Fax',
+            'vcard_data_email' => 'E-mail',
+            'vcard_data_website' => 'Website',
+            'vcard_data_org' => 'Organization',
+            
+            'mecard_data_fname' => 'First Name',
+            'mecard_data_lname' => 'Last Name',
+            'mecard_data_telephone' => 'Telephone',
+            'mecard_data_email' => 'E-mail',
+            'mecard_data_website' => 'Website',
+            'company'=>'Company',
+        );
+    }
+
+}

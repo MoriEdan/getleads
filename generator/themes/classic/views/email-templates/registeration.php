@@ -1,0 +1,1 @@
+Thank you for registration with us. One of our admins will activate you.

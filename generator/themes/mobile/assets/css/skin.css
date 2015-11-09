@@ -1,0 +1,94 @@
+.hero-unit h1, h1, h2, h3{
+    font-family: 'GeosansLight';
+    letter-spacing: normal;
+    text-shadow: 0px 1px 0 #eee, 0px 2px 0 #ddd;
+}
+
+blockquote p{
+    line-height: 16px;
+    font-size: 13px;
+}
+
+blockquote:after{
+    content: none;
+}
+
+.well, .table-bordered {
+    border: 1px solid #ddd;
+    padding: 30px;
+}
+
+.table-bordered tr, .table-bordered th, .table-bordered td{
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.thumbnail, blockquote, blockquote:before, blockquote:after, .table-bordered:before, .table-bordered:after,.well:before, .well:after,.hero-unit,.hero-unit:before,.hero-unit:after {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: rgba(255,255,255,0.8);
+}
+
+blockquote,.hero-unit {
+    position: relative;
+    background-color: #fff; 
+    background-image: 
+        linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+
+
+blockquote{
+    padding: 18px 10px 10px 40px;
+    background-image: linear-gradient(90deg, transparent 29px, #abced4 29px, #abced4 31px, transparent 31px),linear-gradient(#eee .1em, transparent .1em);
+}
+
+
+.thumbnail:before, .thumbnail:after, blockquote:before, .blockquote:after, .table-bordered:before, .table-bordered:after,.well:before, .well:after, .hero-unit:after, .hero-unit:before {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    z-index: -1;
+}
+
+.thumbnail:before, blockquote:before, .table-bordered:before, .well:before, .hero-unit:before {
+    background: rgba(255,255,255,0.5);
+}
+
+.thumbnail:after, blockquote:after, .table-bordered:after, .well:after, .hero-unit:after {
+    background: rgba(255,255,255,0.8);
+}
+
+blockquote:before {
+    -moz-transform: rotateZ(0.5deg);
+    -webkit-transform: rotateZ(0.5deg);
+    -ms-transform: rotateZ(0.5deg);
+    transform: rotateZ(0.5deg);
+}
+
+.well,.thumbnail, .table-bordered {
+    box-shadow: none;
+    position: relative;
+    background: rgba(255,255,255,0.9);
+}
+
+.thumbnail:before, .table-bordered:before, .well:before, .hero-unit:before {
+    -moz-transform: rotateZ(1deg);
+    -webkit-transform: rotateZ(1deg);
+    -ms-transform: rotateZ(1deg);
+    transform: rotateZ(1deg);
+}
+
+
+.thumbnail:after, .table-bordered:after, .well:after, .hero-unit:after {
+    -moz-transform: rotateZ(-2deg);
+    -webkit-transform: rotateZ(-2deg);
+    -ms-transform: rotateZ(-2deg);
+    transform: rotateZ(-2deg);
+}
